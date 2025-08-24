@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "43af903f-eb30-40ec-865a-45fdbf7a11f3",
+		"name": "Online_Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3317497"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tableta iPAD Pro\",\r\n    \"description\": \"Tableta cu ios.\",\r\n    \"price\": 7000.5,\r\n    \"images\": [\r\n        {\r\n            \"imageUrl\": \"https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGFwcGxlJTIwaXBob25lfGVufDB8fDB8fHww\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/products",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/products",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/products/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Tableta Google Pixel\",\r\n    \"description\": \"Tableta cu android 14.\",\r\n    \"price\": 2000.5,\r\n    \"images\": [\r\n        {\r\n            \"imageUrl\": \"https://telefoanepremium.ro/wp-content/uploads/2023/05/6543740cv17d.jpg\"\r\n        },\r\n        {\r\n            \"imageUrl\": \"https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGFwcGxlJTIwaXBob25lfGVufDB8fDB8fHww\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/products",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/products/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recover Product By Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/products/recover/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products",
+								"recover",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Deleted Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/products/recover",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"products",
+								"recover"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/users",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/users/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/users/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Admin\",\r\n    \"address\":\"Strada Victoriei, nr 10\",\r\n    \"phone\":\"0777755625\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"1234\",\r\n    \"userRole\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/users",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\":\"Admin\",\r\n    \"address\":\"Strada Victoriei, nr 101\",\r\n    \"phone\":\"0777755625\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"1234\",\r\n    \"userRole\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/users",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recover User By Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/users/recover/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users",
+								"recover",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Deleted Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/users/recover",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users",
+								"recover"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ionel\",\r\n    \"address\":\"strada sperantei\",\r\n    \"phone\":\"0777755625\",\r\n    \"email\":\"ion@test.com\",\r\n    \"password\":\"1234\",\r\n    \"confirmPassword\":\"1234\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/auth/register",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/auth/login",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Commands",
+			"item": [
+				{
+					"name": "GetAllCommands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/commands",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCommandById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/commands/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCommandById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/commands/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCommand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"details\": \"Acesta este un test\",\r\n    \"date\": \"2024-12-08\",\r\n    \"paymentStatus\": \"PENDING\",\r\n    \"customer\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/commands",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCommand",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"details\": \"Acesta este un test pentru update\",\r\n    \"date\" : \"2024-12-08\",\r\n    \"paymentStatus\": \"PENDING\",\r\n    \"customer\" : {\r\n        \"id\": \"2\"\r\n    },\r\n    \"products\":[\r\n        {\r\n            \"id\": \"3\"\r\n        },\r\n        {\r\n            \"id\":\"2\"\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/commands",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recover Command By Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/commands/recover/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands",
+								"recover",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Deleted Commands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/commands/recover",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"commands",
+								"recover"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}

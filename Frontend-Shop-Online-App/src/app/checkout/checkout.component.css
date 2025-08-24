@@ -1,0 +1,106 @@
+.lbl-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.product {
+  display: flex;
+  margin-top: 16px;
+}
+
+
+.lbl-price {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  margin: auto 16px;
+}
+
+.image-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.product-info-container {
+  margin-right: 20px;
+  margin-left: 20px;
+  display: grid;
+
+  .lbl-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .lbl-description {
+    font-size: 14px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    width: 250px;
+    line-height: 1.5em;
+    height: 3em; /* height is 2x line-height, so two lines will display */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.btn-delete {
+  background: red;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.product-divider {
+  height: 1px;
+  margin-left: 100px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background: gray;
+}
+
+.div-transport {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+}
+
+.div-total {
+  width: 100%;
+  display: flex;
+
+  .lbl-text {
+    margin-left: 0;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+  }
+
+  .lbl-total {
+    margin-right: 0;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+  }
+}
+
+.btn-submit {
+  border-radius: 5px;
+  background: green;
+  color: white;
+  margin:  16px auto;
+}
+
+.card-summary {
+  width: 300px;
+}

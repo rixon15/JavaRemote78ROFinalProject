@@ -1,0 +1,76 @@
+<div class="page">
+
+  @if (total > 0) {
+    <h2 class="lbl-title">Total cos cumparaturi {{ total }} Lei</h2>
+  } @else {
+    <h2 class="lbl-title">Cos cumparaturi</h2>
+  }
+
+  <div style="display: flex; margin-bottom: 100px">
+    <div style="margin: auto; display: flex">
+      <div style="margin-right: 50px">
+        @for (product of products; track product.id) {
+          <div style="padding-top: 10px; padding-bottom: 10px">
+            <div class="product">
+              <img class="image-preview" [src]="product.images[0].imageUrl"/>
+
+              <div class="product-info-container">
+                <p class="lbl-name">{{ product.name }}</p>
+
+                <p class="lbl-description">{{ product.description }}</p>
+              </div>
+
+              <div style="display: flex">
+                <p class="lbl-price">{{ product.price | currency: 'RON' : 'symbol' }}</p>
+              </div>
+
+              <div style="display: flex">
+                <button mat-icon-button class="btn-delete" (click)="onDeleteProduct(product.id)">
+                  <!-- https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed-->
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="product-divider"></div>
+          </div>
+        } @empty {
+          <p>No products!</p>
+        }
+      </div>
+
+      <mat-card class="card-summary mat-elevation-z24">
+        <mat-card-content>
+          <h4>Sumarul coșului de cumpărături</h4>
+
+          <div class="div-transport">
+            <mat-icon fontIcon="local_shipping" style="color: green"></mat-icon>
+            <p style="font-weight: bold; color: green;">Transport Gratuit</p>
+          </div>
+
+          <div>
+            <p style="font-style: italic; font-size: 12px; text-align: justify">Beneficiază de transport gratuit pentru
+              orice comandă! Indiferent de valoarea produsului sau destinația ta, noi ne ocupăm de livrarea acestuia
+              direct la ușa ta, fără niciun cost suplimentar. Comandă acum și economisește timp și bani!</p>
+          </div>
+
+          <mat-form-field style="width: 100%;">
+            <mat-label>Detalii livrare</mat-label>
+            <textarea matInput placeholder="Ex. De sunat inainte ..." [(ngModel)]="details"></textarea>
+          </mat-form-field>
+
+          <div class="div-total">
+            <p class="lbl-text">Total cu TVA</p>
+            <p class="lbl-total">{{ total | currency: 'RON' : 'symbol' }}</p>
+          </div>
+
+          <div style="display:flex;">
+            <button class="btn-submit" [ngStyle]="products.length == 0 ?{'opacity': 0.3} : { 'opacity' : 1} " mat-raised-button [disabled]="products.length == 0" (click)="onCheckout()">Finalizeaza comanda</button>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+.banner-image {
+  width: 100%;
+  height: 250px;
+}
+
+.promotional-container {
+  display: flex;
+}
+
+.promotional-box {
+  width: 50%;
+  height: 250px;
+  background: lightgray;
+}
+
+.spacer-div {
+  width: 8px;
+  background: white;
+}

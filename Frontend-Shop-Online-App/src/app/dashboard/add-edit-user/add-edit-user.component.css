@@ -1,0 +1,13 @@
+.form-card {
+  width: 400px;
+}
+
+.user-form {
+  display: grid;
+}
+
+.delete-button {
+  background: red;
+  color: white;
+  margin-top: 16px;
+}

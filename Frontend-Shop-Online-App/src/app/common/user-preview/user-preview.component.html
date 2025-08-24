@@ -1,0 +1,17 @@
+<mat-card *ngIf="user" class="user-card mat-elevation-z24">
+  <mat-card-content class="user-details-container">
+    <div class="profile-image-container">
+      <p>{{ userService.getInitials(user.name) }}</p>
+    </div>
+
+    <div>
+      <p class="lbl-name">{{ user.name }}</p>
+      <p class="lbl-email">{{ user.email }}</p>
+      <p class="lbl-email">{{ user.phone }}</p>
+      <p class="lbl-email">{{ user.address }}</p>
+
+      <p class="lbl-role" *ngIf="user.userRole == 'ADMIN'">
+        Rol: {{ user.userRole }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

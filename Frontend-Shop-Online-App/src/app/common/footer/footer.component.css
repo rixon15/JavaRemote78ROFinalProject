@@ -1,0 +1,23 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+  grid-gap: 10px; /* spacing between items */
+  background: #983E08;
+  padding: 25px 200px;
+}
+
+@media (max-width: 1000px) {
+  .grid-container {
+    padding: 25px 0;
+  }
+}
+
+.grid-item {
+  background-color: #BA5753;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  height: 250px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}

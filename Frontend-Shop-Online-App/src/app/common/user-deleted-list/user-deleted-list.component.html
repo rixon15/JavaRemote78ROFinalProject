@@ -1,0 +1,26 @@
+<div style="padding: 16px">
+  @for (user of deletedUsers; track user.id) {
+    <mat-card class="user-card mat-elevation-z24">
+      <mat-card-content class="user-details-container">
+        <div class="profile-image-container">
+          <p>{{ usersService.getInitials(user.name) }}</p>
+        </div>
+
+        <div>
+          <p class="lbl-name">{{ user.name }}</p>
+          <p class="lbl-email">{{ user.email }}</p>
+          <p class="lbl-email">{{ user.phone }}</p>
+          <p class="lbl-email">{{ user.address }}</p>
+
+          <p class="lbl-role" *ngIf="user.userRole == 'ADMIN'">
+            Rol: {{ user.userRole }}</p>
+
+          <button mat-button (click)="onRecover(user)">Activare</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  } @empty {
+    <li>There are no deleted accounts.</li>
+  }
+</div>

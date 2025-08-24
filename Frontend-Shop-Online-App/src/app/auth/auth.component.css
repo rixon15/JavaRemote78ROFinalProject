@@ -1,0 +1,33 @@
+.form-container {
+  max-width: 400px;
+  margin: 10vh auto 0;
+}
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.card-data {
+
+  padding: 8px;
+
+  .card-title {
+    margin: 16px;
+  }
+}
+
+mat-card-actions {
+  display: grid;
+}
+
+.btn-submit {
+  margin-bottom: 8px;
+}
+
+:host {
+  display: block;
+  background-image: url('https://png.pngtree.com/background/20230413/original/pngtree-business-e-shopping-picture-image_2422998.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 16px;
+}

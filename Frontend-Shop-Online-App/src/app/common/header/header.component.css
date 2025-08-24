@@ -1,0 +1,14 @@
+.banner {
+  background: #DE8826;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.text-btn {
+  color: white !important;
+}

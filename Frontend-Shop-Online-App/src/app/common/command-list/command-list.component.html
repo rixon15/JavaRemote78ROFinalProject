@@ -1,0 +1,45 @@
+@for(command of commands; track command.id) {
+  <mat-card style="margin-bottom: 16px;">
+    <mat-card-content>
+      <h3>Comanda nr: {{ command.id }}</h3>
+
+      <div style="display: flex">
+
+
+        <div style="display: grid">
+          <div style="display: grid">
+            @for(product of command.products; track product.id) {
+              <div class="product">
+                <img class="image-preview" [src]="product.images[0].imageUrl"/>
+
+                <div class="product-info-container">
+                  <p class="lbl-name">{{ product.name }}</p>
+
+                  <p class="lbl-description">{{ product.description }}</p>
+                </div>
+
+                <div style="display: flex">
+                  <p class="lbl-price">{{ product.price | currency: 'RON' : 'symbol' }}</p>
+                </div>
+
+              </div>
+            }
+          </div>
+
+          <div style="display: flex;margin-top: 16px">
+            <p class="lbl-price"><b>Total:</b> {{ command.total | currency: 'RON' : 'symbol' }}</p>
+          </div>
+        </div>
+
+        <div style="display: grid">
+          <app-user-preview [user]="command.customer"></app-user-preview>
+
+          <button mat-raised-button class="delete-button" (click)="onRemove(command.id)">
+            <mat-icon>delete</mat-icon>
+            Sterge
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+}

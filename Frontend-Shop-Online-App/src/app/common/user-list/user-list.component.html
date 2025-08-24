@@ -1,0 +1,9 @@
+<div class="users-container">
+
+  @for (user of users; track user.id) {
+    <app-user-preview [user]="user" (click)="onSelect(user)"></app-user-preview>
+  } @empty {
+    <p>No users at this moment!</p>
+  }
+
+</div>

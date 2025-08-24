@@ -1,0 +1,38 @@
+<div class="page" *ngIf="product">
+
+
+  <div style="display: flex; margin-top: 30px; margin-bottom: 30px;">
+
+    <div class="images-container">
+      <img class="product-image" [src]="mainImage"/>
+
+      <div style="margin-top: 16px;" *ngIf="product.images.length > 1">
+        @for (image of product.images; track image.id) {
+          <img class="product-image-preview" [src]="image.imageUrl" (click)="onChangeImage(image.imageUrl)"/>
+        }
+      </div>
+    </div>
+
+    <div class="details-container">
+      <mat-card>
+        <mat-card-content>
+          <h2 class="lbl-title">{{ product.name }}</h2>
+
+          <p>{{ product.description }}</p>
+
+          <p class="lbl-price" >{{ product.price | currency: 'RON' : 'symbol' }}</p>
+        </mat-card-content>
+      </mat-card>
+
+      <div class="btn-container">
+        <button mat-fab extended (click)="onBuy()">
+          <mat-icon>favorite</mat-icon>
+          Adauga in cos!
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

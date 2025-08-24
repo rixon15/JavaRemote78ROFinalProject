@@ -1,0 +1,19 @@
+<div class="products-container" >
+  @for (product of products; track product.name) {
+    <mat-card class="product-card mat-elevation-z24" (click)="onSelectProduct(product)">
+      <img class="image-preview" [src]="product.images[0].imageUrl">
+
+      <mat-card-content class="product-info">
+        <h2 class="lbl-title">{{ product.name }}</h2>
+
+        <p class="truncate-multiline">{{ product.description }}</p>
+
+        <p class="lbl-price" (click)="onBuy(product, $event)">{{
+            product.price | currency: 'RON' : 'symbol' }}</p>
+      </mat-card-content>
+    </mat-card>
+
+  } @empty {
+    <li>There are no products.</li>
+  }
+</div>

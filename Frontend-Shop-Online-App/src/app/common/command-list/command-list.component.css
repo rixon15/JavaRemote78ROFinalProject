@@ -1,0 +1,49 @@
+.product {
+  display: flex;
+  margin-top: 16px;
+}
+
+
+.lbl-price {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  margin: auto 16px;
+}
+
+.image-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.product-info-container {
+  margin-right: 20px;
+  margin-left: 20px;
+  display: grid;
+
+  .lbl-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .lbl-description {
+    font-size: 14px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    width: 250px;
+    line-height: 1.5em;
+    height: 3em; /* height is 2x line-height, so two lines will display */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.delete-button {
+  color: white;
+  background: red;
+}

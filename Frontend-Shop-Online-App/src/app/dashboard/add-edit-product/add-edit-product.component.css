@@ -1,0 +1,42 @@
+.form-card {
+  width: 400px;
+}
+
+.product-form {
+  display: grid;
+}
+
+.delete-button {
+  background: red;
+  color: white;
+  margin-top: 16px;
+}
+
+.add-image-button {
+  margin: 10px 10px 30px auto;
+}
+
+.delete-image-button {
+  background: red;
+  color: white;
+  margin-left: 16px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.image-preview {
+  height: 50px;
+  width: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+  /*margin-right: 16px;*/
+}
+
+.image-preview-container {
+  display: -webkit-box;
+}
+
+.image-field {
+  margin-top: auto;
+  margin-bottom: auto;
+}

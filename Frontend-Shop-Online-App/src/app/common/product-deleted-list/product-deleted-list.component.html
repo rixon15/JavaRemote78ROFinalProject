@@ -1,0 +1,19 @@
+<div class="products-container">
+  @for (product of deletedProducts; track product.name) {
+    <mat-card class="product-card mat-elevation-z24">
+      <img class="image-preview" [src]="product.images[0].imageUrl">
+
+      <mat-card-content class="product-info">
+        <h2 class="lbl-title">{{ product.name }}</h2>
+
+        <p class="truncate-multiline">{{ product.description }}</p>
+
+        <p class="lbl-price" (click)="onRecover(product)">Activeaza</p>
+
+      </mat-card-content>
+    </mat-card>
+
+  } @empty {
+    <li>There are no deleted products.</li>
+  }
+</div>

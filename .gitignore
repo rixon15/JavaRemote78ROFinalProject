@@ -1,0 +1,66 @@
+# ---- Global ----
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*.tmp
+
+# IntelliJ IDEA / Eclipse
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+bin/
+
+# VSCode
+.vscode/
+
+# Node & Java common
+node_modules/
+dist/
+build/
+out/
+target/
+
+# ---- Backend (Java - Spring, Maven/Gradle) ----
+/Backend-Shop-Online-App/target/
+/Backend-Shop-Online-App/build/
+/Backend-Shop-Online-App/.classpath
+/Backend-Shop-Online-App/.project
+/Backend-Shop-Online-App/.settings/
+/Backend-Shop-Online-App/.idea/
+/Backend-Shop-Online-App/*.iml
+
+# Logs & temp
+/Backend-Shop-Online-App/*.log
+/Backend-Shop-Online-App/logs/
+/Backend-Shop-Online-App/tmp/
+/Backend-Shop-Online-App/.DS_Store
+
+# ---- Frontend (Angular) ----
+/Frontend-Shop-Online-App/node_modules/
+/Frontend-Shop-Online-App/dist/
+/Frontend-Shop-Online-App/.angular/cache/
+/Frontend-Shop-Online-App/.idea/
+/Frontend-Shop-Online-App/*.iml
+/Frontend-Shop-Online-App/.vscode
+
+# Env files
+/Frontend-Shop-Online-App/src/environments/environment*.ts
+/Frontend-Shop-Online-App/.env
+
+# ---- Optional ----
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Mac / Windows files
+**/.DS_Store
+**/Thumbs.db
+

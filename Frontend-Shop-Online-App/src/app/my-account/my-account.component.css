@@ -1,0 +1,16 @@
+.lbl-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.menu-container {
+  margin-right: 30px;
+  width: 300px;
+}
+
+.content {
+  display: flex;
+  margin-left: auto; margin-right: auto;
+  margin-bottom: 50px;
+}

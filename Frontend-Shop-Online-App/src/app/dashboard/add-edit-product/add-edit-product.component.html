@@ -1,0 +1,60 @@
+<mat-card class="form-card">
+  <mat-card-content *ngIf="productForm">
+    <form [formGroup]="productForm"  novalidate class="product-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput id="name" type="text" formControlName="name"/>
+        <mat-error *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+          Name is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput id="description" type="text" formControlName="description"/>
+        <mat-error *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+          A valid description is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput id="price" type="number" formControlName="price"/>
+        <mat-error *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+          Price is required.
+        </mat-error>
+      </mat-form-field>
+
+      <div formArrayName="images" class="image-container">
+        <div *ngFor="let image of images.controls; let i = index" [formGroupName]="i" class="image-preview-container">
+          <div style="height: 50px;width: 100px;" >
+            <img class="image-preview" *ngIf="image.get('imageUrl')?.value" [src]="image.get('imageUrl')?.value" alt="Image Preview" />
+          </div>
+          <mat-form-field appearance="fill" class="image-field">
+            <mat-label>Image URL</mat-label>
+            <input
+              matInput
+              formControlName="imageUrl"
+            />
+          </mat-form-field>
+          <button mat-icon-button class="delete-image-button" (click)="onRemoveImage(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+        <div style="display:flex;">
+          <button mat-raised-button color="primary" class="add-image-button" (click)="onAddImage()">
+            <mat-icon>add</mat-icon>
+            Add Image
+          </button>
+        </div>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="productForm.invalid">Salveaza</button>
+      <button mat-raised-button class="delete-button" (click)="onRemove()">
+        <mat-icon>delete</mat-icon>
+        Sterge
+      </button>
+    </form>
+
+  </mat-card-content>
+</mat-card>

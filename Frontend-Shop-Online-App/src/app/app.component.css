@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .app-footer {
+    font-size: 14px;
+  }
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #8309A4; /* Optional background color */
+}
+
+.app-wrapper > router-outlet {
+  flex: 3; /* Ensures the main content takes up available space */
+}

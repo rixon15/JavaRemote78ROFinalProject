@@ -1,0 +1,14 @@
+<div style="display: grid">
+  <div style="display: flex">
+    <app-add-edit-user [user]="selectedUser"></app-add-edit-user>
+
+    <app-user-list (selectUserEvent)="onReceivedUser($event)"></app-user-list>
+  </div>
+
+
+  <div>
+    <h3>Utilizatori dezactivati</h3>
+
+    <app-user-deleted-list></app-user-deleted-list>
+  </div>
+</div>
